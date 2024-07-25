@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public float MinYaw = -360;
-    public float MaxYaw = 360;
-    public float MinPitch = -10;
-    public float MaxPitch = 10;
+    private float MinYaw = -360;
+    private float MaxYaw = 360;
+    private float MinPitch = -10;
+    private float MaxPitch = 10;
     public float LookSensitivity = 1;
-    public float cameraHeight = 3;
+    private float cameraHeight = 3;
     private GameObject playerCamera;
 
     protected float yaw;
