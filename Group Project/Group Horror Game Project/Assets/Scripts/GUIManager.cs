@@ -15,4 +15,9 @@ public class GUIManager : MonoBehaviour
     {
         
     }
+
+    public void ButtonTest()
+    {
+        print("We did it!");
+    }
 }
