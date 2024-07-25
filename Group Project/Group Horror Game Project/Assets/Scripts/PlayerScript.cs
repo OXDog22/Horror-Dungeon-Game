@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public float MinYaw = -360;
+    public float MaxYaw = 360;
+    public float MinPitch = -60;
+    public float MaxPitch = 60;
+    public float LookSensitivity = 1;
+    public float cameraHeight = 3;
+    public Camera playerCamera;
+
+    protected float yaw;
+    protected float pitch;
+
     private Rigidbody playerRb;
     public float speed = 5.0f;
 
@@ -21,5 +32,33 @@ public class PlayerScript : MonoBehaviour
         transform.Translate(Vector3.forward * speed * forwardInput * Time.deltaTime);
         transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime);
         //playerRb.AddForce(Vector3.forward * speed * forwardInput * Time.deltaTime);
+
+        // Camera Look
+        yaw += Input.GetAxisRaw("Mouse X") * LookSensitivity;
+        pitch -= Input.GetAxisRaw("Mouse Y") * LookSensitivity;
+
+        yaw = ClampAngle(yaw, MinYaw, MaxYaw);
+        pitch = ClampAngle(pitch, MinPitch, MaxPitch);
+
+        playerCamera.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        playerCamera.transform.position = new Vector3(playerRb.transform.position.x, playerRb.transform.position.y + cameraHeight, playerRb.transform.position.z);
+        playerRb.transform.rotation = playerCamera.transform.rotation;
     }
+    protected float ClampAngle(float angle)
+    {
+        return ClampAngle(angle, 0, 360);
+    }
+
+    protected float ClampAngle(float angle, float min, float max)
+    {
+        if (angle < -360)
+            angle += 360;
+        if (angle > 360)
+            angle -= 360;
+
+        return Mathf.Clamp(angle, min, max);
+    }
+
+
 }
+
