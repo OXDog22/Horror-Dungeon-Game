@@ -17,7 +17,9 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         float forwardInput = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.forward * speed * forwardInput * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime);
         //playerRb.AddForce(Vector3.forward * speed * forwardInput * Time.deltaTime);
     }
 }
