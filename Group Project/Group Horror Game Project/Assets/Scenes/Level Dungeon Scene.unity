@@ -212,6 +212,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &260094551
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.142
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.401
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.26954174
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9629888
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -148.726
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
+      propertyPath: m_Name
+      value: RemadeCandleMelted(C)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d3985dcff041f64b87e43f245654309, type: 3}
 --- !u!1 &323037034
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +430,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc0a932a3f510544b84d589f1f775c7, type: 3}
+--- !u!1001 &885844081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.142
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.882
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.26954174
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9629888
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -148.726
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_Name
+      value: RemadeCandleMelted(A)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273760140548245601, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3212c8079ce7e644b58f7b5287adc51, type: 3}
 --- !u!1001 &898228096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,6 +690,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1502898650194241139, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
   m_PrefabInstance: {fileID: 1281073324}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1874101852
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.142
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.68
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.26954174
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9629888
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -148.726
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
+      propertyPath: m_Name
+      value: RemadeCandleMelted(B)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 817aa116e54ab874c94ef5b58161c1ea, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -556,3 +767,6 @@ SceneRoots:
   - {fileID: 154507404}
   - {fileID: 349492670}
   - {fileID: 1281073324}
+  - {fileID: 885844081}
+  - {fileID: 1874101852}
+  - {fileID: 260094551}
