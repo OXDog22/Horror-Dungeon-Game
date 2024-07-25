@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviour
     public float MaxPitch = 60;
     public float LookSensitivity = 1;
     public float cameraHeight = 3;
-    public Camera playerCamera;
+    private GameObject playerCamera;
 
     protected float yaw;
     protected float pitch;
@@ -22,6 +22,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        playerCamera = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
