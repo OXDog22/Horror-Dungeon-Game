@@ -1597,8 +1597,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.028332813, y: 0.028332816, z: 0.049810868}
-  m_Center: {x: -0.0007875576, y: 0.000000001660013, z: 0.024905434}
+  m_Size: {x: 0.019814156, y: 0.020673314, z: 0.04981088}
+  m_Center: {x: 0.0034717456, y: 0.003829751, z: 0.024905697}
 --- !u!1 &615529209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -759326101473264515, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
@@ -1909,8 +1909,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.028332813, y: 0.028332818, z: 0.049810868}
-  m_Center: {x: -0.0007875613, y: -1.3086865e-11, z: 0.024905434}
+  m_Size: {x: 0.024784235, y: 0.015380427, z: 0.049810864}
+  m_Center: {x: 0.0009867307, y: 0.006476185, z: 0.024905508}
 --- !u!1 &822090610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5221362154787028305, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
@@ -3115,6 +3115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Next Level Trigger
       objectReference: {fileID: 0}
+    - target: {fileID: 5006632898008090253, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.83
+      objectReference: {fileID: 0}
     - target: {fileID: 7959026430977397170, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
       propertyPath: m_Name
       value: Circle.008
@@ -4230,8 +4234,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.020152153, y: 0.020982113, z: 0.049810868}
-  m_Center: {x: -0.0007876044, y: -0.00000002221387, z: 0.024905434}
+  m_Size: {x: 0.013589379, y: 0.016044647, z: 0.04981087}
+  m_Center: {x: -0.0040689516, y: -0.0024687555, z: 0.024905436}
 --- !u!1 &1608174914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4762214524986973565, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
@@ -5192,8 +5196,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02015216, y: 0.016395465, z: 0.04981087}
-  m_Center: {x: -0.0007876073, y: -0.002293346, z: 0.024905436}
+  m_Size: {x: 0.02015216, y: 0.014308105, z: 0.04981087}
+  m_Center: {x: -0.0007876073, y: -0.0012496614, z: 0.024905436}
 --- !u!1 &1959657912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2396895099372030023, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
