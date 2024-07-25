@@ -6,8 +6,8 @@ public class PlayerScript : MonoBehaviour
 {
     public float MinYaw = -360;
     public float MaxYaw = 360;
-    public float MinPitch = -60;
-    public float MaxPitch = 60;
+    public float MinPitch = -10;
+    public float MaxPitch = 10;
     public float LookSensitivity = 1;
     public float cameraHeight = 3;
     private GameObject playerCamera;
