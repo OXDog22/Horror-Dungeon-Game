@@ -3988,6 +3988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: castle_map
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 933415294046487485, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -4010,7 +4014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1364076815127437966, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1695373464719956416, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
       propertyPath: m_TagString
@@ -5021,6 +5025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 2808841876453764475, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6355050458818338380, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
       propertyPath: LookSensitivity
       value: 10
@@ -5900,8 +5908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3bfe44e666def48b1791aecfbfe3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LookSensitivity: 1
-  keys: 0
+  LookSensitivity: 5
   speed: 5
 --- !u!1 &1678830220 stripped
 GameObject:
@@ -6920,8 +6927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e3e008c0c6ec14cbe2315743259d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRangeX: 20
-  spawnRangeZ: 20
   Raindrop:
   - {fileID: 853189472700120641, guid: d44e94bc1acaf6f4b8d5d26016722bf4, type: 3}
 --- !u!4 &2047331233

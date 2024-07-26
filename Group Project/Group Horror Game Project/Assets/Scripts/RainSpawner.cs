@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RainSpawner : MonoBehaviour
 {
-    public float spawnRangeX = 1;
-    public float spawnRangeZ = 1;
+    private float spawnRangeX = 10;
+    private float spawnRangeZ = 10;
     private float startDelay = 0;
     private float spawnInterval = 0.2f;
     public GameObject[] Raindrop;
