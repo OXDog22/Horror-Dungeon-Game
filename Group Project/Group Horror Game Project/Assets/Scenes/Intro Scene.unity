@@ -1104,6 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d192d30bf60af874281509bf7ae3057b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Level Castle Scene
 --- !u!1 &434033092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2365642950474440402, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
@@ -6898,8 +6899,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRangeX: 20
   spawnRangeZ: 20
+  startDelay: 0
+  spawnInterval: 0.2
   Raindrop:
   - {fileID: 853189472700120641, guid: d44e94bc1acaf6f4b8d5d26016722bf4, type: 3}
+  rain: 0
 --- !u!4 &2047331233
 Transform:
   m_ObjectHideFlags: 0
