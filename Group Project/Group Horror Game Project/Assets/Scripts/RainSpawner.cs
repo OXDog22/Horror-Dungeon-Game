@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RainSpawner : MonoBehaviour
 {
-    public float spawnRangeX = 20;
-    public float spawnRangeZ = 20;
+    public float spawnRangeX = 1;
+    public float spawnRangeZ = 1;
     private float startDelay = 0;
-    private float spawnInterval = 0.5f;
+    private float spawnInterval = 0.2f;
     public GameObject[] Raindrop;
     private int rain = 0;
     private GameObject player;
@@ -29,7 +29,7 @@ public class RainSpawner : MonoBehaviour
     void SpawnRain()
     {
         transform.position = player.transform.position;
-        Vector3 spawnpos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 20, Random.Range(-spawnRangeZ, spawnRangeZ)) + transform.position;
+        Vector3 spawnpos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 10, Random.Range(-spawnRangeZ, spawnRangeZ)) + transform.position;
         Instantiate(Raindrop[rain], spawnpos, Raindrop[rain].transform.rotation);
     }
 
