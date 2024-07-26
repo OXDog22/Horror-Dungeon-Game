@@ -9,11 +9,11 @@ public class PlayerScript : MonoBehaviour
     private float MaxYaw = 360;
     private float MinPitch = -10;
     private float MaxPitch = 10;
-    public float LookSensitivity = 5;
+    public float LookSensitivity = 1;
     private float cameraHeight = 1;
     private GameObject playerCamera;
     private bool hiding = false;
-    public int keys = 0;
+    private int keys = 0;
 
     protected float yaw;
     protected float pitch;
