@@ -767,6 +767,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4553493075587844769, guid: e405e25ce6619424b9e2496a12cf5709, type: 3}
+      propertyPath: enemyPounceRange
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6978189059864223124, guid: e405e25ce6619424b9e2496a12cf5709, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
