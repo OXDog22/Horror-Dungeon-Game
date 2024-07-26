@@ -6904,6 +6904,7 @@ MonoBehaviour:
   Raindrop:
   - {fileID: 853189472700120641, guid: d44e94bc1acaf6f4b8d5d26016722bf4, type: 3}
   rain: 0
+  player: {fileID: 0}
 --- !u!4 &2047331233
 Transform:
   m_ObjectHideFlags: 0
