@@ -4,5 +4,21 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Intro Scene.unity
+    guid: cc16b7ad1de039e44bb40ec75e31d07b
+  - enabled: 1
+    path: Assets/Scenes/Level Castle Scene.unity
+    guid: 8e21f39f1d0f8d9479ca6f682c7428d7
+  - enabled: 1
+    path: Assets/Scenes/Level Dungeon Scene.unity
+    guid: 794588bbe9e34de488a4908e18d8ad1a
+  - enabled: 1
+    path: Assets/Scenes/Level Mine Scene.unity
+    guid: 13c052f4729aa984e94f55c532eb438d
+  - enabled: 1
+    path: Assets/Scenes/Level Boss Cave Scene.unity
+    guid: 3af280a4b17a4cd47adfc95e2795ed4c
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
