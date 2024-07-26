@@ -1104,7 +1104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d192d30bf60af874281509bf7ae3057b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Level Castle Scene
 --- !u!1 &434033092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2365642950474440402, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
@@ -4984,7 +4983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1502898650194241139, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 1502898650194241139, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5026,13 +5025,17 @@ PrefabInstance:
       propertyPath: LookSensitivity
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6355050458818338380, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1502898650194241139, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 974975799}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2808841876453764475, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1652810112}
   m_SourcePrefab: {fileID: 100100000, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
 --- !u!4 &1376916686 stripped
 Transform:
@@ -5880,6 +5883,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020152148, y: 0.020982113, z: 0.049810868}
   m_Center: {x: -0.00078760606, y: -0.000000016609771, z: 0.024905434}
+--- !u!1 &1652810106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2808841876453764475, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
+  m_PrefabInstance: {fileID: 1376916685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652810112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652810106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3bfe44e666def48b1791aecfbfe3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LookSensitivity: 1
+  keys: 0
+  speed: 5
 --- !u!1 &1678830220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3520277415521947783, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
@@ -6899,12 +6922,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRangeX: 20
   spawnRangeZ: 20
-  startDelay: 0
-  spawnInterval: 0.2
   Raindrop:
   - {fileID: 853189472700120641, guid: d44e94bc1acaf6f4b8d5d26016722bf4, type: 3}
-  rain: 0
-  player: {fileID: 0}
 --- !u!4 &2047331233
 Transform:
   m_ObjectHideFlags: 0
