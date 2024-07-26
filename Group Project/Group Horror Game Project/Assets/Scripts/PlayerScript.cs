@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     public float LookSensitivity = 1;
     private float cameraHeight = 1;
     private GameObject playerCamera;
+    private bool hiding = false;
 
     protected float yaw;
     protected float pitch;
@@ -44,6 +46,7 @@ public class PlayerScript : MonoBehaviour
         playerCamera.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
         playerCamera.transform.position = new Vector3(playerRb.transform.position.x, playerRb.transform.position.y + cameraHeight, playerRb.transform.position.z);
         playerRb.transform.rotation = playerCamera.transform.rotation;
+        Debug.Log(hiding);
     }
     protected float ClampAngle(float angle)
     {
@@ -60,6 +63,15 @@ public class PlayerScript : MonoBehaviour
         return Mathf.Clamp(angle, min, max);
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("HidingSpot"))
+        {
+            hiding = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        hiding = false;
+    }
 }
-
