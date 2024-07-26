@@ -3255,6 +3255,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: -6021695887308639463, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.508
+      objectReference: {fileID: 0}
     - target: {fileID: -5538985522780130180, guid: c9b4ab3941237054fb5df181f811e3ee, type: 3}
       propertyPath: m_TagString
       value: Ground
