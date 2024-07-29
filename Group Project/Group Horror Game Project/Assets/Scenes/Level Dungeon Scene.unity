@@ -264,7 +264,8 @@ PrefabInstance:
       value: DUNGEONfbxVerFIXED 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: 9a5e2cc75cde7dc4fb08e7dd7c7c35d4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a5e2cc75cde7dc4fb08e7dd7c7c35d4, type: 3}
