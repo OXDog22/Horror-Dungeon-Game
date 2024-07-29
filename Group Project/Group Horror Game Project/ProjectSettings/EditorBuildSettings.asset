@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Castle Scene.unity
     guid: 8e21f39f1d0f8d9479ca6f682c7428d7
   - enabled: 1
-    path: Assets/Scenes/Level Dungeon Scene.unity
+    path: Assets/Scenes/Test Scene.unity
     guid: 794588bbe9e34de488a4908e18d8ad1a
   - enabled: 1
     path: Assets/Scenes/Level Mine Scene.unity
