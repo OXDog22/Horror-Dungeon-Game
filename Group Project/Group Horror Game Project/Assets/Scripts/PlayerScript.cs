@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     private GameObject playerCamera;
     private bool hiding = false;
     private int keys = 0;
+    public GameObject [] playerInv;
 
     protected float yaw;
     protected float pitch;
@@ -49,6 +50,19 @@ public class PlayerScript : MonoBehaviour
         playerRb.transform.rotation = playerCamera.transform.rotation;
         Debug.Log(hiding);
         Debug.Log(keys);
+
+        //crouch
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            speed = 2.0f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            speed = 5.0f;
+        }
+
     }
     protected float ClampAngle(float angle)
     {
