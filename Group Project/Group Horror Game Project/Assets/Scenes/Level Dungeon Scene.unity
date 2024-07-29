@@ -251,11 +251,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4959823408679087662, guid: 52268020830e72740a1763a1f61662ca, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2532295940958744660, guid: 52268020830e72740a1763a1f61662ca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2052821614}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52268020830e72740a1763a1f61662ca, type: 3}
+--- !u!4 &236316584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2532295940958744660, guid: 52268020830e72740a1763a1f61662ca, type: 3}
+  m_PrefabInstance: {fileID: 223594242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &298985106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7191828561964885890, guid: 9a5e2cc75cde7dc4fb08e7dd7c7c35d4, type: 3}
@@ -871,11 +876,11 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Color: {r: 0.8784314, g: 0.5647059, b: 0.2784314, a: 1}
+  m_Intensity: 4
+  m_Range: 8.217806
+  m_SpotAngle: 141.067
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -930,12 +935,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052821612}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21538407, y: 0.77977496, z: -0.36361504, w: 0.46189266}
-  m_LocalPosition: {x: 1.4029307, y: 10.032405, z: 5.9526076}
-  m_LocalScale: {x: 3.45945, y: 3.4594495, z: 3.4594498}
+  m_LocalRotation: {x: 0.478907, y: 0.8084988, z: 0.29426956, w: 0.17430787}
+  m_LocalPosition: {x: 0.0053, y: -0.0141, z: 0.0339}
+  m_LocalScale: {x: 0.034594502, y: 0.0345945, z: 0.034594502}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1171977707}
+  m_Father: {fileID: 236316584}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &2071229678 stripped
 GameObject:
