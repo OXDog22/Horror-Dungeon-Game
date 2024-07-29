@@ -88,14 +88,14 @@ public class PlayerScript : MonoBehaviour
         if (other.CompareTag("KeyItem"))
         {
             keys += 1;
-            Destroy(other);
+            //Destroy(other);
         }
         if (other.CompareTag("LockedDoor"))
         {
             if (keys > 0)
             {
                 keys -= 1;
-                Destroy(other);
+                //Destroy(other);
             }
         }
     }
