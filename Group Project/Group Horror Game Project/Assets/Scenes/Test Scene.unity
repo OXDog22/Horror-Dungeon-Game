@@ -879,6 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookSensitivity: 1
+  playerInv: []
   speed: 5
 --- !u!1001 &1874101852
 PrefabInstance:
