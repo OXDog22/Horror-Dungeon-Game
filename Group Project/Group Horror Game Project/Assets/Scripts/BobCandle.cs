@@ -5,6 +5,10 @@ using UnityEngine;
 public class BobCandle : MonoBehaviour
 {
     private Vector3 offSet;
+    public Mesh[] CandleStages;
+    public MeshFilter[] CandleParts;
+    public Light CandleLight;
+    
     // Start is called before the first frame update
     void Start()
     {
