@@ -17,7 +17,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
-        player = GameObject.Find("Cylinder");
+        player = GameObject.Find("Player");
         enemyAnimator = gameObject.GetComponent<Animator>();
     }
 
