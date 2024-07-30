@@ -31,4 +31,6 @@ public class Grandpa : MonoBehaviour
         Destroy(gameObject);
         //What you can't see doesn't exist =)
     }
+
+   
 }

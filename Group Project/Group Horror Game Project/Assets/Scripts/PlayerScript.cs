@@ -5,6 +5,7 @@ using UnityEngine.ProBuilder.MeshOperations;
 
 public class PlayerScript : MonoBehaviour
 {
+    public GameObject[] CandlePhases;
     private float MinYaw = -360;
     private float MaxYaw = 360;
     private float MinPitch = -10;
@@ -22,7 +23,7 @@ public class PlayerScript : MonoBehaviour
     private GameObject lever5;
     private GameObject dungeonkey;
     private GameObject dungeondoor;
-    public int hp = 3;
+    public int Hp = 3;
 
     protected float yaw;
     protected float pitch;
@@ -99,7 +100,9 @@ public class PlayerScript : MonoBehaviour
             speed = 5.0f;
         }
 
-    }
+        //Update Candle states by HP
+        CandleUpdate();
+}
     protected float ClampAngle(float angle)
     {
         return ClampAngle(angle, 0, 360);
@@ -229,5 +232,42 @@ public class PlayerScript : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         hiding = false;
+    }
+
+    private void CandleUpdate()
+    {
+        if (Hp == 3)
+        {
+            CandlePhases[0].SetActive(true);
+            CandlePhases[1].SetActive(false);
+            CandlePhases[2].SetActive(false);
+            CandlePhases[3].SetActive(false);
+
+        }
+        else if (Hp == 2)
+        {
+            CandlePhases[0].SetActive(false);
+            CandlePhases[1].SetActive(true);
+            CandlePhases[2].SetActive(false);
+            CandlePhases[3].SetActive(false);
+
+        }
+        else if (Hp == 1)
+        {
+            CandlePhases[0].SetActive(false);
+            CandlePhases[1].SetActive(false);
+            CandlePhases[2].SetActive(true);
+            CandlePhases[3].SetActive(false);
+
+        }
+        else if (Hp == 0)
+        {
+            CandlePhases[0].SetActive(false);
+            CandlePhases[1].SetActive(false);
+            CandlePhases[2].SetActive(false);
+            CandlePhases[3].SetActive(true);
+
+        }
+
     }
 }
