@@ -23,9 +23,7 @@ public class EnemyScript : MonoBehaviour
     {
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
-
         PlayerScript= player.GetComponent<PlayerScript>();
-
         enemyAnimator = gameObject.GetComponent<Animator>();
         
     }
