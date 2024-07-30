@@ -15,18 +15,38 @@ public class PlayerScript : MonoBehaviour
     private bool hiding = false;
     private int keys = 0;
     public GameObject [] playerInv;
+    private GameObject lever1;
+    private GameObject lever2;
+    private GameObject lever3;
+    private GameObject lever4;
+    private GameObject lever5;
+    private GameObject dungeonkey;
+    private GameObject dungeondoor;
+    public int hp = 3;
 
     protected float yaw;
     protected float pitch;
 
     private Rigidbody playerRb;
     public float speed = 5.0f;
-    
+    private bool button1 = true;
+    private bool button2 = false;
+    private bool button3 = false;
+    private bool button4 = false;
+    private bool button5 = true;
+
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         playerCamera = GameObject.Find("Main Camera");
+        lever1 = GameObject.Find("Lever1");
+        lever2 = GameObject.Find("Lever2");
+        lever3 = GameObject.Find("Lever3");
+        lever4 = GameObject.Find("Lever4");
+        lever5 = GameObject.Find("Lever5");
+        dungeonkey = GameObject.Find("Key");
+        dungeondoor = GameObject.Find("Door");
     }
 
     // Update is called once per frame
@@ -48,8 +68,24 @@ public class PlayerScript : MonoBehaviour
         playerCamera.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
         playerCamera.transform.position = new Vector3(playerRb.transform.position.x, playerRb.transform.position.y + cameraHeight, playerRb.transform.position.z);
         playerRb.transform.rotation = playerCamera.transform.rotation;
-        Debug.Log(hiding);
-        Debug.Log(keys);
+
+        //dungeon puzzle solution
+        if (button1 == false)
+        {
+            if (button2 == true)
+            {
+                if (button3 == true)
+                {
+                    if (button4 == false)
+                    {
+                        if (button5 == true)
+                        {
+                            dungeonkey.transform.Translate(new Vector3(0, -5, 0));
+                        }
+                    }
+                }
+            }
+        }
 
         //crouch
         if (Input.GetKey(KeyCode.LeftShift))
@@ -81,24 +117,115 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //for hiding spot, picking up key
         if (other.CompareTag("HidingSpot"))
         {
             hiding = true;
         }
-        if (other.CompareTag("Key"))
+        if (other.CompareTag("KeyItem"))
         {
             keys += 1;
-            //Destroy(other);
+            Destroy(other);
         }
-        if (other.CompareTag("LockedDoor"))
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (CompareTag("LockedDoor"))
         {
             if (keys > 0)
             {
                 keys -= 1;
-                //Destroy(other);
+                Destroy(dungeondoor);
             }
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        //for levers in dungeon
+        if (other.CompareTag("button1"))
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (button1 == true)
+                {
+                    button1 = false;
+                    lever1.transform.Translate(new Vector3(0, -0.5f, 0));
+                }
+                else if (button1 == false)
+                {
+                    button1 = true;
+                    lever1.transform.Translate(new Vector3(0, 0.5f, 0));
+                }
+            }
+        }
+        if (other.CompareTag("button2"))
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (button2 == true)
+                {
+                    button2 = false;
+                    lever2.transform.Translate(new Vector3(0, -0.5f, 0));
+                }
+                else if (button2 == false)
+                {
+                    button2 = true;
+                    lever2.transform.Translate(new Vector3(0, 0.5f, 0));
+                }
+            }
+        }
+        if (other.CompareTag("button3"))
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (button3 == true)
+                {
+                    button3 = false;
+                    lever3.transform.Translate(new Vector3(0, -0.5f, 0));
+                }
+                else if (button3 == false)
+                {
+                    button3 = true;
+                    lever3.transform.Translate(new Vector3(0, 0.5f, 0));
+                }
+            }
+        }
+        if (other.CompareTag("button4"))
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (button4 == true)
+                {
+                    button4 = false;
+                    lever4.transform.Translate(new Vector3(0, -0.5f, 0));
+                }
+                else if (button4 == false)
+                {
+                    button4 = true;
+                    lever4.transform.Translate(new Vector3(0, 0.5f, 0));
+                }
+            }
+        }
+        if (other.CompareTag("button5"))
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (button5 == true)
+                {
+                    button5 = false;
+                    lever5.transform.Translate(new Vector3(0, -0.5f, 0));
+                }
+                else if (button5 == false)
+                {
+                    button5 = true;
+                    lever5.transform.Translate(new Vector3(0, 0.5f, 0));
+                }
+            }
+        }
+    }
+        
     private void OnTriggerExit(Collider other)
     {
         hiding = false;

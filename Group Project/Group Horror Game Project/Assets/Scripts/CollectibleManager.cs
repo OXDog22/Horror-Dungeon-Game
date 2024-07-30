@@ -33,7 +33,7 @@ public class CollectibleManager : MonoBehaviour
             //transform.rotation += transform.forward;
             OscolateBy = Mathf.Sin(Time.time);
 
-            transform.position = new Vector3(transform.position.x, OscolateBy/2 + 1 + yOffset, transform.position.z);
+            //transform.position = new Vector3(transform.position.x, OscolateBy/2 + 1 + yOffset, transform.position.z);
             //not configured yet
         }
 
