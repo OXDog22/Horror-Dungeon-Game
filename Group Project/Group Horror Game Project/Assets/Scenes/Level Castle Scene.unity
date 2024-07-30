@@ -313,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 107593919}
   serializedVersion: 2
   m_LocalRotation: {x: -0.38345215, y: 0.6195651, z: 0.36044624, w: 0.5823934}
-  m_LocalPosition: {x: 0.0009, y: 0.0018, z: 0.0329}
+  m_LocalPosition: {x: -0.0008, y: -0.0057, z: 0.0359}
   m_LocalScale: {x: 0.034594502, y: 0.0345945, z: 0.034594487}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -598,8 +598,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3bfe44e666def48b1791aecfbfe3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CandlePhases: []
   LookSensitivity: 10
+  hiding: 0
   playerInv: []
+  Hp: 3
   speed: 5
 --- !u!1 &641682267 stripped
 GameObject:
