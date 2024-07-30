@@ -1,0 +1,1 @@
+Models ripped by LuigiTKO (Removed), credit not needed but strongly appreciated. UV maps were originally flipped, so if the textures come out weird then flip the textures 180 degrees and mirror them.
