@@ -85,7 +85,7 @@ public class PlayerScript : MonoBehaviour
         {
             hiding = true;
         }
-        if (other.CompareTag("KeyItem"))
+        if (other.CompareTag("Key"))
         {
             keys += 1;
             //Destroy(other);

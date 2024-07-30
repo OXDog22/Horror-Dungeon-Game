@@ -17,7 +17,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
-        player = GameObject.Find("Player");
+        player = GameObject.Find("Cylinder");
         enemyAnimator = gameObject.GetComponent<Animator>();
     }
 
@@ -38,7 +38,7 @@ public class EnemyScript : MonoBehaviour
             {
                 enemyAnimator.SetBool("isChasing", true);
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(playerDirection.normalized * -1), Time.deltaTime * 5 * movementEnabled);
-                transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled * -1);
+                transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled);
                 
             }
 
@@ -48,10 +48,9 @@ public class EnemyScript : MonoBehaviour
             
             if (enemyAnimator.GetBool("Pounce"))
             {
-                transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled * -1);
+                transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled);
             }
         }
-
 
 
         //unused code
