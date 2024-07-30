@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
     public float LookSensitivity = 10;
     private float cameraHeight = 1;
     private GameObject playerCamera;
-    private bool hiding = false;
+    public bool hiding = false;
     private int keys = 0;
     public GameObject [] playerInv;
     private GameObject lever1;
