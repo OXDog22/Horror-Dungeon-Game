@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3134629461872500958, guid: 4949b329dcf16b24db8e34d83f6da8d2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f80a3d5616c2b74896c10334db3a2cd, type: 2}
     - target: {fileID: 596168779263024228, guid: 4949b329dcf16b24db8e34d83f6da8d2, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
@@ -311,6 +315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: minelevel
       objectReference: {fileID: 0}
+    - target: {fileID: 6414093634987607195, guid: 4949b329dcf16b24db8e34d83f6da8d2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bf9c0f3f07c2a94ca92a1fb56cdfcab, type: 2}
     - target: {fileID: 7371124492959393969, guid: 4949b329dcf16b24db8e34d83f6da8d2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -572,9 +580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3bfe44e666def48b1791aecfbfe3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CandlePhases: []
   LookSensitivity: 10
   playerInv: []
-  hp: 3
+  Hp: 3
   speed: 5
 --- !u!1 &1462592921
 GameObject:
