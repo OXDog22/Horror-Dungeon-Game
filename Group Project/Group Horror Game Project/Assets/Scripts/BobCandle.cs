@@ -9,14 +9,15 @@ public class BobCandle : MonoBehaviour
     //public MeshFilter[] CandleParts;
     public GameObject[] CandlePhases;
     private Light CandleLight;
-    //private GameObject Grandpa = GameObject.Find("GrandpaWallLook");
+    private PlayerScript PlayerControllerScript;
 
-    public int Hp; 
+    private int Hp; 
         
     // Start is called before the first frame update
     void Start()
     {
-       // Hp = Grandpa.GetComponent<Grandpa>().Hp;
+        PlayerControllerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
+        Hp = PlayerControllerScript.hp;
         offSet = transform.position;
 
     }
@@ -40,6 +41,7 @@ public class BobCandle : MonoBehaviour
         //CandleParts[i].transform.localScale = CandleStages[index].transform.localScale;
         // }
 
+        Hp = PlayerControllerScript.hp;
 
         if (Hp == 3)
         {
