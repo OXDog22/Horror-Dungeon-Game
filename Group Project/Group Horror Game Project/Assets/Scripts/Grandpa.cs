@@ -7,10 +7,12 @@ public class Grandpa : MonoBehaviour
 {
     private GameObject PlayerReference;
     private Animator GrandpaAnim;
+    
     // Start is called before the first frame update
     void Start()
     {
         GrandpaAnim= GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame

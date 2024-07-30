@@ -9,12 +9,16 @@ public class BobCandle : MonoBehaviour
     //public MeshFilter[] CandleParts;
     public GameObject[] CandlePhases;
     private Light CandleLight;
-    private int Hp = GameObject.Find("Player").Hp;
-    
+    //private GameObject Grandpa = GameObject.Find("GrandpaWallLook");
+
+    public int Hp; 
+        
     // Start is called before the first frame update
     void Start()
     {
+       // Hp = Grandpa.GetComponent<Grandpa>().Hp;
         offSet = transform.position;
+
     }
 
     // Update is called once per frame
@@ -28,13 +32,14 @@ public class BobCandle : MonoBehaviour
         //Update the part to correspond to HP
         // Hp can be 0 1 2 3, Candle stages range 0-23, (3 - Hp) * 6 + (CandlePartIndex) 
 
-       // for (int i = 0; i < 6; i++)
+        // for (int i = 0; i < 6; i++)
         //{
-            //int index = (3 - Hp) * 6 + i];
-            //CandleParts[i].mesh = CandleStages[index];
-            //this works properly
-            //CandleParts[i].transform.localScale = CandleStages[index].transform.localScale;
-       // }
+        //int index = (3 - Hp) * 6 + i];
+        //CandleParts[i].mesh = CandleStages[index];
+        //this works properly
+        //CandleParts[i].transform.localScale = CandleStages[index].transform.localScale;
+        // }
+
 
         if (Hp == 3)
         {
@@ -43,21 +48,24 @@ public class BobCandle : MonoBehaviour
             CandlePhases[2].SetActive(false);
             CandlePhases[3].SetActive(false);
 
-        } else if (Hp == 2)
+        }
+        else if (Hp == 2)
         {
             CandlePhases[0].SetActive(false);
             CandlePhases[1].SetActive(true);
             CandlePhases[2].SetActive(false);
             CandlePhases[3].SetActive(false);
 
-        } else if (Hp == 1)
+        }
+        else if (Hp == 1)
         {
             CandlePhases[0].SetActive(false);
             CandlePhases[1].SetActive(false);
             CandlePhases[2].SetActive(true);
             CandlePhases[3].SetActive(false);
 
-        } else if (Hp == 0)
+        }
+        else if (Hp == 0)
         {
             CandlePhases[0].SetActive(false);
             CandlePhases[1].SetActive(false);
@@ -65,7 +73,6 @@ public class BobCandle : MonoBehaviour
             CandlePhases[3].SetActive(true);
 
         }
-           
-        
+
     }
 }
