@@ -8,7 +8,7 @@ public class BobCandle : MonoBehaviour
     //public Mesh[] CandleStages;
     //public MeshFilter[] CandleParts;
     
-    private Light CandleLight;
+    
     
 
     private int Hp; 

@@ -50,7 +50,7 @@ public class EnemyScript : MonoBehaviour
             {
                 enemyAnimator.SetBool("isChasing", true);
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(playerDirection.normalized * -1), Time.deltaTime * 5 * movementEnabled);
-                transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled);
+                transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled * -1);
                 
             }
 
@@ -60,7 +60,7 @@ public class EnemyScript : MonoBehaviour
             
             if (enemyAnimator.GetBool("Pounce"))
             {
-                transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled);
+                transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled * -1);
             }
         }
 
