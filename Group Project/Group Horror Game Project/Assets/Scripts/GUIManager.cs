@@ -35,5 +35,7 @@ public class GUIManager : MonoBehaviour
         Objectpt1.transform.rotation = playerCamera.transform.rotation;
         Objectpt2.transform.rotation = playerCamera.transform.rotation;
         Objectpt3.transform.rotation = playerCamera.transform.rotation;
+
+        Instantiate(Objectpt1);
     }
 }
