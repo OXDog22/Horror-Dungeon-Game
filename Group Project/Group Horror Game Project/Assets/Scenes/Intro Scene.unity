@@ -2491,6 +2491,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1376916686}
     m_Modifications:
+    - target: {fileID: 3770074288256551807, guid: 52268020830e72740a1763a1f61662ca, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6480804824517085760, guid: a2c854ebc8f3bfd458dc5d717b4f34e7, type: 3}
     - target: {fileID: 4959823408679087662, guid: 52268020830e72740a1763a1f61662ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.24
@@ -5908,7 +5912,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3bfe44e666def48b1791aecfbfe3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CandlePhases: []
   LookSensitivity: 5
+  hiding: 0
+  playerInv: []
+  Hp: 3
   speed: 5
 --- !u!1 &1678830220 stripped
 GameObject:
