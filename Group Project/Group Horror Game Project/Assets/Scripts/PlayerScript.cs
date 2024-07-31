@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
     private float cameraHeight = 1;
     private GameObject playerCamera;
     public bool hiding = false;
-    private int keys = 0;
+    public int keys = 0;
     public GameObject [] playerInv;
     private GameObject lever1;
     private GameObject lever2;
@@ -125,7 +125,7 @@ public class PlayerScript : MonoBehaviour
         {
             hiding = true;
         }
-        if (other.CompareTag("KeyItem"))
+        if (other.CompareTag("Key"))
         {
             keys += 1;
             Destroy(other);
@@ -134,7 +134,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (CompareTag("LockedDoor"))
+        if (collision.gameObject.CompareTag("LockedDoor"))
         {
             if (keys > 0)
             {
