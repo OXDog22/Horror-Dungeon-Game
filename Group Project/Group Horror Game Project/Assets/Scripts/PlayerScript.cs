@@ -34,6 +34,7 @@ public class PlayerScript : MonoBehaviour
 
     private Rigidbody playerRb;
     private GameManager gameManager;
+    private BossManager bossManager;
     public float speed = 5.0f;
     private bool button1 = true;
     private bool button2 = false;
@@ -44,6 +45,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bossManager = GameObject.Find("Boss + center point").GetComponent<BossManager>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerRb = GetComponent<Rigidbody>();
         playerCamera = GameObject.Find("Main Camera");
@@ -76,6 +78,8 @@ public class PlayerScript : MonoBehaviour
         //playerRb.AddForce(Vector3.forward * speed * forwardInput * Time.deltaTime);
 
         // Camera Look
+
+        
         yaw += Input.GetAxisRaw("Mouse X") * LookSensitivity;
         pitch -= Input.GetAxisRaw("Mouse Y") * LookSensitivity;
 
