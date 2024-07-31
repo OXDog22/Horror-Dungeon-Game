@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour
     private GameObject lever5;
     private GameObject dungeonkey;
     private GameObject dungeondoor;
-    public int Hp = 3;
+    public int Hp;
 
     protected float yaw;
     protected float pitch;
@@ -271,3 +271,7 @@ public class PlayerScript : MonoBehaviour
 
     }
 }
+//      ()
+//      ||
+//      ||
+//     O  O
