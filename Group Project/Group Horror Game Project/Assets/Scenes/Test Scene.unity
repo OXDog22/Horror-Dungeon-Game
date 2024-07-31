@@ -826,8 +826,12 @@ MonoBehaviour:
   - {fileID: 1299207387}
   LookSensitivity: 1
   hiding: 0
+  keys: 0
   playerInv: []
   Hp: 3
+  stepping: {fileID: 0}
+  stopper: 0
+  i: 0
   speed: 5
 --- !u!65 &1522486186
 BoxCollider:
