@@ -15,6 +15,7 @@ TagManager:
   - button3
   - button4
   - button5
+  - PressurePlate
   layers:
   - Default
   - TransparentFX
