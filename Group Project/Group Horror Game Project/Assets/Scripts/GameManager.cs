@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.Find("Player");
         PlayerScript = player.GetComponent<PlayerScript>();
+        Debug.Log("Start");
         
     }
 
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
     {
         if (!gameActive)
         {
-            
+            Debug.Log("Game over");
             GameOver.SetActive(true);
         }
     }

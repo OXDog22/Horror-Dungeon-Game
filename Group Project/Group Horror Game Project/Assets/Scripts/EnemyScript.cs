@@ -100,9 +100,14 @@ public class EnemyScript : MonoBehaviour
                 GameManager.gameActive = false;
             }
 
-            animatedBlood.SetActive(true);
-            hitCoolDown= true;
-            StartCoroutine(HurtEffects());
+            if (PlayerScript.Hp > 0)
+            {
+                animatedBlood.SetActive(true);
+                hitCoolDown = true;
+                StartCoroutine(HurtEffects());
+
+            }
+            
          
         }
 
