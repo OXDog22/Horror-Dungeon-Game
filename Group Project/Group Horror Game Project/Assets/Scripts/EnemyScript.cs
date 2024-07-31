@@ -19,6 +19,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject animatedBlood;
     private bool hitCoolDown = false;
     private GameManager GameManager;
+    private Vector3 origin;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class EnemyScript : MonoBehaviour
         PlayerScript= player.GetComponent<PlayerScript>();
         enemyAnimator = gameObject.GetComponent<Animator>();
         GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        origin = gameObject.transform.position;
         
     }
 
@@ -61,6 +63,18 @@ public class EnemyScript : MonoBehaviour
             if (enemyAnimator.GetBool("Pounce"))
             {
                 transform.Translate(playerDirection.normalized * speed * Time.deltaTime * movementEnabled * -1);
+            } else
+            {
+                Vector3 originDirection = new Vector3(origin.x - transform.position.x, 0, origin.z - transform.position.z);
+
+                if (Mathf.Abs(originDirection.z) > 1 || (Mathf.Abs(originDirection.x) > 1))
+                {
+                    //return to origin
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(originDirection.normalized * -1), Time.deltaTime * 5 * movementEnabled);
+                    transform.Translate(originDirection.normalized * speed * Time.deltaTime * movementEnabled * -1);
+                }
+                
+
             }
         }
 
