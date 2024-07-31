@@ -23,6 +23,10 @@ public class Grandpa : MonoBehaviour
         {
             GrandpaAnim.SetBool("PlayerWithinRange", true);
         }
+        if (PlayerReference.transform.position.x < -44)
+        {
+            GrandpaAnim.SetBool("PlayerWithinRangeDungeon", true);
+        }
     }
 
     void HideTheEvidence()
