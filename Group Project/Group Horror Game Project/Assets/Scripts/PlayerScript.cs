@@ -24,6 +24,10 @@ public class PlayerScript : MonoBehaviour
     private GameObject dungeonkey;
     private GameObject dungeondoor;
     public int Hp;
+    public AudioClip stepping;
+    private AudioSource playerAudio;
+    public bool stopper = false;
+    public int i = 0;
 
     protected float yaw;
     protected float pitch;
@@ -48,6 +52,7 @@ public class PlayerScript : MonoBehaviour
         lever5 = GameObject.Find("Lever5");
         dungeonkey = GameObject.Find("Key");
         dungeondoor = GameObject.Find("Door");
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -102,7 +107,31 @@ public class PlayerScript : MonoBehaviour
 
         //Update Candle states by HP
         CandleUpdate();
-}
+
+        //walking sound
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            stopper = false;
+            StartCoroutine(WalkingTimer());
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            stopper = true;
+        }
+    }
+
+    IEnumerator WalkingTimer()
+    {
+        for (i = 0; i < 10000000; i++)
+        {
+            if (stopper == false)
+            {
+                yield return new WaitForSeconds(0.6f);
+                playerAudio.PlayOneShot(stepping, 0.2f);
+            }
+        }
+    }
+
     protected float ClampAngle(float angle)
     {
         return ClampAngle(angle, 0, 360);
@@ -271,7 +300,3 @@ public class PlayerScript : MonoBehaviour
 
     }
 }
-//      ()
-//      ||
-//      ||
-//     O  O
