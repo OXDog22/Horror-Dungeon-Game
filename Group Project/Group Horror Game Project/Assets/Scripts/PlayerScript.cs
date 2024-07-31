@@ -33,6 +33,7 @@ public class PlayerScript : MonoBehaviour
     protected float pitch;
 
     private Rigidbody playerRb;
+    private GameManager gameManager;
     public float speed = 5.0f;
     private bool button1 = true;
     private bool button2 = false;
@@ -43,6 +44,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerRb = GetComponent<Rigidbody>();
         playerCamera = GameObject.Find("Main Camera");
         lever1 = GameObject.Find("Lever1");
@@ -58,10 +60,19 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float forwardInput = Input.GetAxis("Vertical");
-        float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.forward * speed * forwardInput * Time.deltaTime);
-        transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime);
+        //This if condition disables movement and sound when the game is over
+        if (gameManager.gameActive)
+        {
+            float forwardInput = Input.GetAxis("Vertical");
+            float horizontalInput = Input.GetAxis("Horizontal");
+            transform.Translate(Vector3.forward * speed * forwardInput * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime);
+
+        } else
+        {
+            stopper = true;
+        }
+        
         //playerRb.AddForce(Vector3.forward * speed * forwardInput * Time.deltaTime);
 
         // Camera Look
@@ -109,7 +120,7 @@ public class PlayerScript : MonoBehaviour
         CandleUpdate();
 
         //walking sound
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && gameManager.gameActive)
         {
             stopper = false;
             StartCoroutine(WalkingTimer());
