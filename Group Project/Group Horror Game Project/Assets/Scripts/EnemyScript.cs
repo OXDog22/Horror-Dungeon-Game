@@ -18,6 +18,8 @@ public class EnemyScript : MonoBehaviour
     private bool hiding;
     public GameObject animatedBlood;
     private bool hitCoolDown = false;
+    private GameManager GameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class EnemyScript : MonoBehaviour
         player = GameObject.Find("Player");
         PlayerScript= player.GetComponent<PlayerScript>();
         enemyAnimator = gameObject.GetComponent<Animator>();
+        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         
     }
 
@@ -85,6 +88,10 @@ public class EnemyScript : MonoBehaviour
         if (other.CompareTag("Player") && !hiding && !hitCoolDown)
         {
             PlayerScript.Hp -= 1;
+            if (PlayerScript.Hp < 1)
+            {
+                GameManager.gameActive = false;
+            }
 
             animatedBlood.SetActive(true);
             hitCoolDown= true;
