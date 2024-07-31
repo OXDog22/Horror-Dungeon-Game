@@ -79,6 +79,13 @@ public class EnemyScript : MonoBehaviour
     // for the sake of types, 0 = false, 1 = true
     }
 
+    //called at start of stand up clip
+    void StandUp()
+    {
+        enemyAnimator.SetBool("Pounce", false);
+        movementEnabled = 1; 
+    }
+
 
 
     private void OnTriggerEnter(Collider other)
