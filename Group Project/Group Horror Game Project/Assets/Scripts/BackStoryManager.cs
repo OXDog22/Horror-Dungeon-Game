@@ -37,7 +37,7 @@ public class BackStoryManager : MonoBehaviour
         for (int i = 0; i < 7; i++)
         {
             storyText.text = story[i];
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(.4f);
             yield return new WaitUntil(CheckSpaceKeyPressed);
         }
 
@@ -46,7 +46,7 @@ public class BackStoryManager : MonoBehaviour
 
     private bool CheckSpaceKeyPressed()
     {
-        return Input.GetKeyDown(KeyCode.Space);
+        return Input.GetKey(KeyCode.Space);
     }
 
 }
