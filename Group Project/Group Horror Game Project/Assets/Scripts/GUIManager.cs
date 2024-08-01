@@ -19,73 +19,94 @@ public class GUIManager : MonoBehaviour
     public GameObject objectpt2;
     public GameObject objectpt3;
 
+    private Rigidbody objectpt1Rb;
+    private Rigidbody objectpt2Rb;
+    private Rigidbody objectpt3Rb;
+
+    public float rotateSpeed = 40;
+
     // Lets us know when Inventory is open
     public bool isInventoryOpen = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (isInventoryOpen == false)
+        {
+            inventoryButton.gameObject.SetActive(true);
+            leftArrow.gameObject.SetActive(false);
+            rightArrow.gameObject.SetActive(false);
+            exitButton.gameObject.SetActive(false);
+            objectpt1.gameObject.SetActive(false);
+            objectpt2.gameObject.SetActive(false);
+            objectpt3.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (objectpt1 == isActiveAndEnabled && objectpt2 == isActiveAndEnabled && objectpt3 == isActiveAndEnabled)
+        {
+            objectpt1.transform.Rotate(Vector3.forward * Time.deltaTime * rotateSpeed);
+            objectpt2.transform.Rotate(Vector3.back * Time.deltaTime * rotateSpeed);
+            objectpt3.transform.Rotate(Vector3.forward * Time.deltaTime * rotateSpeed);
+        }
     }
 
-    public void ButtonTest()
-    {
-        print("We did it!");
-    }
     public void OpenInventory()
 
      // Makes inventory items appear when Inventory opened
     {   if (isInventoryOpen == false)
 
         {   
-            Instantiate(objectpt1, new Vector3(0, 1, -8), objectpt1.transform.rotation); // rotation = new Vector3(-83, 6, 21); 
-            Instantiate(objectpt2, new Vector3(-2, 1.3f, -6), objectpt2.transform.rotation); // rotation = new Vector3(90, -238, -314);
-            Instantiate(objectpt3, new Vector3(2, 0.85f, -6), objectpt3.transform.rotation); // rotation = new Vector3(-92, 0.85f, -95);
-            Instantiate(rightArrow, new Vector3(189, -170, 0), rightArrow.transform.rotation);
-            Instantiate(leftArrow, new Vector3(-176, -169, 0), leftArrow.transform.rotation);
-            Instantiate(exitButton, new Vector3(-1, -169, 0), exitButton.transform.rotation);
+           // object1 rotation = new Vector3(-83, 6, 21);
+           // object2 rotation = new Vector3(90, -238, -314); 
+           // object3 rotation = new Vector3(-92, 0.85f, -95);
+            objectpt1.gameObject.SetActive(true);
+            objectpt2.gameObject.SetActive(true);
+            objectpt3.gameObject.SetActive(true);
+            leftArrow.gameObject.SetActive(true);
+            rightArrow.gameObject.SetActive(true);
+            exitButton.gameObject.SetActive(true);
+            inventoryButton.gameObject.SetActive(false);
             isInventoryOpen = true;
         }
-
-        playerRb.transform.rotation = playerCamera.transform.rotation;
-        objectpt1.transform.rotation = playerCamera.transform.rotation;
-        objectpt2.transform.rotation = playerCamera.transform.rotation;
-        objectpt3.transform.rotation = playerCamera.transform.rotation;
-         
-       Destroy(inventoryButton);
     }
 
     public void CloseInventory()
 
-     // Makes items dissapear when Inventory closed and re-creates the inventory button
+     // Makes items dissapear when Inventory closed and activates the inventory button
     {
         if (isInventoryOpen == true)
         {
-            Destroy(objectpt1);
-            Destroy(objectpt2);
-            Destroy(objectpt3);
-            Destroy(rightArrow);
-            Destroy(leftArrow);
-            Destroy(exitButton);
-            Instantiate(inventoryButton, new Vector3(364, 176, 0), inventoryButton.transform.rotation);
-            isInventoryOpen = false;
+            objectpt1.gameObject.SetActive(false);
+            objectpt2.gameObject.SetActive(false);
+            objectpt3.gameObject.SetActive(false);
+            leftArrow.gameObject.SetActive(false);
+            rightArrow.gameObject.SetActive(false);
+            exitButton.gameObject.SetActive(false);
+            inventoryButton.gameObject.SetActive(true);
+            isInventoryOpen = false;            
         }
     }
-
+    
     public void LeftButton()
     {
         // Rotates all items to the left when the left button is pressed
         if (isInventoryOpen == true)
         {
-            objectpt1.transform.Translate(new Vector3(-10, objectpt1.transform.position.y, -10));
-            objectpt2.transform.Translate(new Vector3(-50, objectpt2.transform.position.y, -50));
-            objectpt3.transform.Translate(new Vector3(-100, objectpt3.transform.position.y, -100));
+            objectpt1Rb = objectpt1.GetComponent<Rigidbody>();
+            objectpt2Rb = objectpt1.GetComponent<Rigidbody>();
+            objectpt3Rb = objectpt1.GetComponent<Rigidbody>();
+            objectpt1Rb.AddForce(Vector3.left * 10);
+
+            if (objectpt1Rb.transform.position.x == objectpt2.transform.position.x)
+            {
+                objectpt1.transform.position = new Vector3(objectpt2.transform.position.x, objectpt1.transform.position.y, objectpt1.transform.position.z);
+            }
+            // objectpt1Rb.AddForce(Vector3.back * 10);
+
         } 
     }
     
