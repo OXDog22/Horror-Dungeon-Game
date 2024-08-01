@@ -266,6 +266,7 @@ public class PlayerScript : MonoBehaviour
                 }
                 else if (button5 == false)
                 {
+                    Debug.Log("y");
                     button5 = true;
                     lever5.transform.Translate(new Vector3(0, 0.5f, 0));
                 }
