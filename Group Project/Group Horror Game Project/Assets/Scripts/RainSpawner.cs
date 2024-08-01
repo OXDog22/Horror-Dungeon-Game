@@ -15,7 +15,7 @@ public class RainSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Cylinder");
+        player = GameObject.Find("Player");
         InvokeRepeating("SpawnRain", startDelay, spawnInterval);
     }
 

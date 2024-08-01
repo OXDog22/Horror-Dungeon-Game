@@ -68,7 +68,9 @@ public class PlayerScript : MonoBehaviour
         dungeonkey = GameObject.Find("Key");
         dungeondoor = GameObject.Find("Door");
         playerAudio = GetComponent<AudioSource>();
-        keyRb = GameObject.Find("Key").GetComponent<Rigidbody>();
+
+        if(SceneManager.GetActiveScene().buildIndex == 2)
+            keyRb = GameObject.Find("Key").GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -101,6 +103,17 @@ public class PlayerScript : MonoBehaviour
         playerCamera.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
         playerCamera.transform.position = new Vector3(playerRb.transform.position.x, playerRb.transform.position.y + cameraHeight, playerRb.transform.position.z);
         playerRb.transform.rotation = playerCamera.transform.rotation;
+
+        //walking sound
+        if (Input.GetKeyDown(KeyCode.W) && gameManager.gameActive)
+        {
+            stopper = false;
+            StartCoroutine(WalkingTimer());
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            stopper = true;
+        }
 
         //dungeon puzzle solution
         if (button1 == false)
@@ -144,17 +157,6 @@ public class PlayerScript : MonoBehaviour
 
         //Update Candle states by HP
         CandleUpdate();
-
-        //walking sound
-        if (Input.GetKeyDown(KeyCode.W) && gameManager.gameActive)
-        {
-            stopper = false;
-            StartCoroutine(WalkingTimer());
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            stopper = true;
-        }
     }
 
     IEnumerator WalkingTimer()
