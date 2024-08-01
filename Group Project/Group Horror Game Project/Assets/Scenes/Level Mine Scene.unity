@@ -939,6 +939,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 272382316166562352, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1bee58127c2e87a429250648f2035f06, type: 2}
     - target: {fileID: 1386587777826771753, guid: d50e32d63526cc34caea1f42f92cd9bc, type: 3}
       propertyPath: m_Mass
       value: 10
@@ -1027,6 +1031,7 @@ MonoBehaviour:
   playerInv: []
   Hp: 3
   stepping: {fileID: 0}
+  ding: {fileID: 0}
   stopper: 0
   i: 0
   speed: 5
