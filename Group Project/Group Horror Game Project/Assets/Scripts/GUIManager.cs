@@ -11,8 +11,8 @@ public class GUIManager : MonoBehaviour
     // These are our Buttons
     public UnityEngine.UI.Button leftArrow;
     public UnityEngine.UI.Button rightArrow;
-    public UnityEngine.UI.Button exitButton;
-    public UnityEngine.UI.Button inventoryButton;
+    public UnityEngine.UI.Button exitButton; 
+    public UnityEngine.UI.Button inventoryButton; // pos(365, 162, 0)
 
     // these are our Inventory items
     public GameObject objectpt1;
@@ -99,6 +99,7 @@ public class GUIManager : MonoBehaviour
             objectpt1Rb = objectpt1.GetComponent<Rigidbody>();
             objectpt2Rb = objectpt1.GetComponent<Rigidbody>();
             objectpt3Rb = objectpt1.GetComponent<Rigidbody>();
+
             objectpt1Rb.AddForce(Vector3.left * 10);
 
             if (objectpt1Rb.transform.position.x == objectpt2.transform.position.x)
