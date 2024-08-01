@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
+    private string text;
+    public GameObject entryCanvas;
+    public TextMeshProUGUI entryText;
     public GameObject[] CandlePhases;
     private float MinYaw = -360;
     private float MaxYaw = 360;
@@ -190,6 +196,14 @@ public class PlayerScript : MonoBehaviour
             keys += 1;
             Destroy(other);
         }
+        if (other.CompareTag("Entry"))
+        {
+            Entries entryScript= other.GetComponent<Entries>();
+            text = entryScript.noteText;
+            Debug.Log(text);
+            StartCoroutine(DisplayText());
+
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -364,4 +378,23 @@ public class PlayerScript : MonoBehaviour
         }
 
     }
+    IEnumerator DisplayText()
+    {
+        Debug.Log(text);
+        
+        entryText.text = text;
+        entryCanvas.SetActive(true);
+
+        yield return new WaitForSeconds(.4f);
+        yield return new WaitUntil(CheckSpaceKeyPressed);
+
+        entryCanvas.SetActive(false);
+
+
+    }
+    private bool CheckSpaceKeyPressed()
+    {
+        return Input.GetKey(KeyCode.Space);
+    }
+
 }
