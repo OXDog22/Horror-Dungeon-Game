@@ -117,7 +117,7 @@ public class PlayerScript : MonoBehaviour
                             {
                                 keyRb.isKinematic = true;
                             }
-                            playerAudio.PlayOneShot(ding, 1.0f);
+                            playerAudio.PlayOneShot(ding, 0.15f);
                         }
                     }
                 }
@@ -211,9 +211,9 @@ public class PlayerScript : MonoBehaviour
                 }
                 StartCoroutine(ButtonDelay1());
             }
-            if (other.CompareTag("button2") && !button2cooldown)
+            if (other.CompareTag("button2"))
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (Input.GetKeyDown(KeyCode.Mouse0) && !button2cooldown)
                 {
                     if (button2 == true)
                     {
@@ -228,9 +228,9 @@ public class PlayerScript : MonoBehaviour
                 }
                 StartCoroutine(ButtonDelay2());
             }
-            if (other.CompareTag("button3") && !button3cooldown)
+            if (other.CompareTag("button3"))
             {
-                if (Input.GetKey(KeyCode.Mouse0))
+                if (Input.GetKeyDown(KeyCode.Mouse0) && !button3cooldown)
                 {
                     if (button3 == true)
                     {
@@ -245,9 +245,9 @@ public class PlayerScript : MonoBehaviour
                 }
                 StartCoroutine(ButtonDelay3());
             }
-            if (other.CompareTag("button4") && !button4cooldown)
+            if (other.CompareTag("button4"))
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (Input.GetKeyDown(KeyCode.Mouse0) && !button4cooldown)
                 {
                     if (button4 == true)
                     {
@@ -262,9 +262,9 @@ public class PlayerScript : MonoBehaviour
                 }
                 StartCoroutine(ButtonDelay4());
             }
-            if (other.CompareTag("button5") && !button5cooldown)
+            if (other.CompareTag("button5"))
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (Input.GetKeyDown(KeyCode.Mouse0) && !button5cooldown)
                 {
                     if (button5 == true)
                     {
