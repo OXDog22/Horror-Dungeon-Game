@@ -6,12 +6,14 @@ public class PressurePlate : MonoBehaviour
 {
     private GameObject lifting;
     private Rigidbody liftRb;
+    private GameObject note;
 
     // Start is called before the first frame update
     void Start()
     {
         liftRb = GetComponent<Rigidbody>();
         lifting = GameObject.Find("lift");
+        note = GameObject.Find("Entry");
     }
 
     // Update is called once per frame
