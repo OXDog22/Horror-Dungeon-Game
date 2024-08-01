@@ -402,6 +402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bossarena
       objectReference: {fileID: 0}
+    - target: {fileID: 7869873546869171050, guid: 59beb5485955806438ff74820b5aedc7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8391222552659086748, guid: 59beb5485955806438ff74820b5aedc7, type: 3}
@@ -615,7 +619,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000005, y: 0.020000093, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1214025509
+--- !u!1 &1200206808
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -623,8 +627,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1214025511}
-  - component: {fileID: 1214025510}
+  - component: {fileID: 1200206809}
+  - component: {fileID: 1200206810}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -632,20 +636,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &1214025510
+--- !u!4 &1200206809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200206808}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.15980004, y: 0.90024054, z: 0.37828532, w: 0.14467634}
+  m_LocalPosition: {x: -0.0017, y: -0.0035, z: 0.0333}
+  m_LocalScale: {x: 0.034594487, y: 0.0345945, z: 0.03459449}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1408395125}
+  m_LocalEulerAnglesHint: {x: 219.409, y: -29.57898, z: -149.066}
+--- !u!108 &1200206810
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214025509}
+  m_GameObject: {fileID: 1200206808}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
+  m_Type: 0
+  m_Color: {r: 0.8773585, g: 0.56588835, b: 0.27727836, a: 1}
+  m_Intensity: 4
+  m_Range: 8.217806
+  m_SpotAngle: 141.06766
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -693,21 +712,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &1214025511
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214025509}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1216903078
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,12 +888,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2532295940958744660, guid: 52268020830e72740a1763a1f61662ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1200206809}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52268020830e72740a1763a1f61662ca, type: 3}
 --- !u!4 &1408395124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4959823408679087662, guid: 52268020830e72740a1763a1f61662ca, type: 3}
+  m_PrefabInstance: {fileID: 1408395123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1408395125 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2532295940958744660, guid: 52268020830e72740a1763a1f61662ca, type: 3}
   m_PrefabInstance: {fileID: 1408395123}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666259419 stripped
@@ -1083,7 +1095,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1216903081}
-  - {fileID: 1214025511}
   - {fileID: 146182681}
   - {fileID: 559467767}
   - {fileID: 344697774}
