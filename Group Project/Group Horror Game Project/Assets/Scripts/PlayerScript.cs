@@ -76,6 +76,8 @@ public class PlayerScript : MonoBehaviour
         //playerRb.AddForce(Vector3.forward * speed * forwardInput * Time.deltaTime);
 
         // Camera Look
+
+        
         yaw += Input.GetAxisRaw("Mouse X") * LookSensitivity;
         pitch -= Input.GetAxisRaw("Mouse Y") * LookSensitivity;
 
@@ -262,6 +264,7 @@ public class PlayerScript : MonoBehaviour
                 }
                 else if (button5 == false)
                 {
+                    Debug.Log("y");
                     button5 = true;
                     lever5.transform.Translate(new Vector3(0, 0.5f, 0));
                 }
