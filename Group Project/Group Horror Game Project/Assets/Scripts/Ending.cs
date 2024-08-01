@@ -43,8 +43,8 @@ public class Ending : MonoBehaviour
             yield return new WaitUntil(CheckSpaceKeyPressed);
         }
 
-        //SceneManager.LoadScene(Name);
-        Debug.Log("load scene thingy");
+        SceneManager.LoadScene(6);
+        
     }
 
     private bool CheckSpaceKeyPressed()
