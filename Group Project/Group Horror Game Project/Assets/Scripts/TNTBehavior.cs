@@ -6,7 +6,9 @@ using UnityEngine;
 public class TNTBehavior : MonoBehaviour
 {
     public ParticleSystem explosionParticles;
+    private BloodScript damagerController;
     private GameObject player;
+    private GameObject bloodController;
     public GameObject Boss;
     private BossManager bossManager;
     private GameManager GameManager;
@@ -16,6 +18,8 @@ public class TNTBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bloodController = GameObject.Find("Animated blood controller");
+        damagerController = bloodController.GetComponent<BloodScript>();
         player = GameObject.Find("Player");
         PlayerScript = player.GetComponent<PlayerScript>();
         Boss = GameObject.Find("Boss");
@@ -51,9 +55,7 @@ public class TNTBehavior : MonoBehaviour
 
             if (PlayerScript.Hp > 0)
             {
-                animatedBlood.SetActive(true);
-                StartCoroutine(HurtEffects());
-
+                damagerController.PlayerHurt();
             }
 
         }
@@ -69,11 +71,5 @@ public class TNTBehavior : MonoBehaviour
         Destroy(gameObject);
     }
 
-    IEnumerator HurtEffects()
-    {
-        yield return new WaitForSeconds(1);
-        animatedBlood.SetActive(false);
-        
-
-    }
+    
 }

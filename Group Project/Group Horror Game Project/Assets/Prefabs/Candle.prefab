@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8569563258644022286
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2890633
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.26954246
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.96298856
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -148.726
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_Name
+      value: Candle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579237404451996346, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6480804824517085760, guid: a2c854ebc8f3bfd458dc5d717b4f34e7, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2607137095148041107}
+  m_SourcePrefab: {fileID: 100100000, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+--- !u!1 &8803514385113446751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fc2442a234194e149a0195956f8e7c09, type: 3}
+  m_PrefabInstance: {fileID: 8569563258644022286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2607137095148041107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803514385113446751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42be5545e0955440b36cbddda0a1304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
