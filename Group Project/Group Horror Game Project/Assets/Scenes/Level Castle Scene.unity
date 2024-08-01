@@ -608,7 +608,8 @@ MonoBehaviour:
   keys: 0
   playerInv: []
   Hp: 3
-  stepping: {fileID: 0}
+  stepping: {fileID: 8300000, guid: 2faecdd71ac11724f8b8b5458c8db23f, type: 3}
+  ding: {fileID: 8300000, guid: 2a5d4009fc3b2df478e031cc50e656f2, type: 3}
   stopper: 0
   i: 0
   speed: 5
