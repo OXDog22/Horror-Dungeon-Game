@@ -5,10 +5,14 @@ using UnityEngine;
 public class BossManager : MonoBehaviour
 {
     private GameObject player;
+    public GameObject ending;
+    public Ending endingScript;
+    public ParticleSystem explosionEffect;
     public bool bossFightActive = true;
     private Vector3 spawnPos;
     public GameObject tntBarrel;
     public GameObject normalBarrel;
+    public GameObject bossHead;
     public int bossHp = 5;
 
     // Start is called before the first frame update
@@ -53,7 +57,28 @@ public class BossManager : MonoBehaviour
 
             }
         }
+
+        //explode
+
+        StartCoroutine(ExplosionSequence());
         
+        
+
+    }
+
+    IEnumerator ExplosionSequence()
+    {
+        explosionEffect.Play();
+        yield return new WaitForSeconds(.5f);
+        explosionEffect.Play();
+        yield return new WaitForSeconds(.5f);
+        explosionEffect.Play();
+        yield return new WaitForSeconds(.5f);
+
+        ending.SetActive(true);
+        endingScript.StartEndSequence();
+        Destroy(bossHead);
+
 
     }
 }
