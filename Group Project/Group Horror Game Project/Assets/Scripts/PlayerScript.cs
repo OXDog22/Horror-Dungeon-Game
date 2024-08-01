@@ -25,6 +25,7 @@ public class PlayerScript : MonoBehaviour
     private GameObject dungeondoor;
     public int Hp;
     public AudioClip stepping;
+    public AudioClip ding;
     private AudioSource playerAudio;
     public bool stopper = false;
     public int i = 0;
@@ -116,6 +117,7 @@ public class PlayerScript : MonoBehaviour
                             {
                                 keyRb.isKinematic = true;
                             }
+                            playerAudio.PlayOneShot(ding, 1.0f);
                         }
                     }
                 }
