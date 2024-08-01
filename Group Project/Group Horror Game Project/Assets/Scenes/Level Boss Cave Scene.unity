@@ -565,6 +565,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 59beb5485955806438ff74820b5aedc7, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 59beb5485955806438ff74820b5aedc7, type: 3}
       propertyPath: m_Name
       value: Boss
@@ -954,8 +958,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2110695874}
+  - component: {fileID: 2110695875}
   m_Layer: 0
-  m_Name: Focal Point
+  m_Name: Boss + center point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -977,6 +982,19 @@ Transform:
   - {fileID: 1966332460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -175.913, z: 0}
+--- !u!114 &2110695875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110695873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ce6148c1221a24bbc02970b7567135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossFightActive: 1
 --- !u!1001 &2129030448
 PrefabInstance:
   m_ObjectHideFlags: 0
